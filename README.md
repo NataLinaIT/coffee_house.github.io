@@ -19,6 +19,6 @@
   - callback button followed by callback form registration;
 
 
- [Link to Landing page ]( https://natalinait.github.io/coffee_house.github.io/
+ [Link to Landing page ]( https://natalinait.github.io/coffee_house.github.io/)
 
  [Link to case on Bechance ]( https://www.behance.net/gallery/104153143/Coffee-Shop-Landing-Page)
