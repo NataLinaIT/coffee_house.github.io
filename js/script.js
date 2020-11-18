@@ -291,7 +291,9 @@ function updateThirdItemToleft(){
 function renderCart(num, img_num){
   //image
   let imageNum = img_num || currentSortIndex;
-  document.querySelector(`#sorts .slider_item_0${num}`).style.background = `url("../img/sorts_0${imageNum}.png") no-repeat center`;
+  document.querySelector(`#sorts .slider_item_0${num} img`).src = `img/sorts_0${imageNum}.png")`;
+  document.querySelector(`#sorts .slider_item_0${num} .srcset_01`).setAttribute("srcset", `img/sorts_0${imageNum}.webp`);
+  document.querySelector(`#sorts .slider_item_0${num} .srcset_02`).setAttribute("srcset", `img/sorts_0${imageNum}.png`);
 
   //title
   document.querySelector(`#sorts .slider_item_0${num} .slider_item_title`).textContent = `${sortSliderArr[imageNum-1][1].title}`;
@@ -304,7 +306,9 @@ function updateSliderIndication(active){
     e.classList.remove("_active");
   });
   document.querySelector(`#sorts .indicator_item_0${active}`).classList.add("_active");
-};
+}
+
+;
 //review section slider
 const sliderReviewToleft = document.querySelector("#review .controll_left");
 const sliderReviewToright = document.querySelector("#review .controll_right");
@@ -420,7 +424,9 @@ function updateReviewThirdItemToleft(){
 function renderReviewCart(num, img_num){
   //image
   let imageNum = img_num || currentReviewIndex;
-  document.querySelector(`#review .slider_item_0${num} .testim_img`).style.background = `url("../img/testimonial_0${imageNum}.png") no-repeat center`;
+  document.querySelector(`#review .slider_item_0${num} img`).src = `img/testimonial_0${imageNum}.png")`;
+  document.querySelector(`#review .slider_item_0${num} .srcset_01`).setAttribute("srcset", `img/testimonial_0${imageNum}.webp`);
+  document.querySelector(`#review .slider_item_0${num} .srcset_02`).setAttribute("srcset", `img/testimonial_0${imageNum}.png`);
 
   //title
   document.querySelector(`#review .slider_item_0${num} .slider_item_text`).textContent = `${reviewSliderArr[imageNum-1][1].text}`;
@@ -434,7 +440,8 @@ function updateSliderReviewIndication(active){
     e.classList.remove("_active");
   });
   document.querySelector(`#review .indicator_item_0${active}`).classList.add("_active");
-};
+}
+;
 //menu section
 const tab_espresso = document.querySelector(".tab_espresso");
 const tab_milkbased = document.querySelector(".tab_milkbased");
@@ -701,7 +708,6 @@ function setactivetab(active_tab){
   })
   active_tab.classList.add("active_tab");
 }
-
 
 //mobile tabs arrow
 tab_arrow_right.addEventListener("click", tabsToRight);
